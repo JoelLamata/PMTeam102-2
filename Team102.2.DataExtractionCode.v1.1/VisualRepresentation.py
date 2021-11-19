@@ -26,10 +26,13 @@ st.subheader('Poblation Data')
 st.write(df_poblacio)
 
 st.subheader('Demografic Data')
-st.write(df_demografia)
+st.line_chart(df_demografia)
 
 st.subheader('Last Decade Rent Data')
 st.write(df_lloguer)
+st.bar_chart(df_lloguer["renda"])
 
-st.subheader('Age Gender Data')
-st.write(df_edat_sexe)
+if st.checkbox('Show Age Gender Data'):
+    st.subheader('Age Gender Data')
+    st.write(df_edat_sexe)
+
